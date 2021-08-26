@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
+    <article>
+      <h3></h3>
+      <p></p>
+      <img src="" alt="" />
+    </article>
+
     <script>
       let dyr = {
         navn: "Futte",
@@ -14,7 +21,10 @@
         billede: "http://mabe-kea.dk/E19/pics/pig.png",
         levested: "Grønland",
       };
-      console.log("Den lever!");
+
+      console.log(
+        `Navn: ${dyr.navn}, Type: ${dyr.type}, Levested: ${dyr.levested}`
+      );
     </script>
   </body>
 </html>
