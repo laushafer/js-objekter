@@ -11,20 +11,27 @@
     <article>
       <h3></h3>
       <p></p>
-      <img src="" alt="" />
     </article>
 
-    <script>
-      let dyr = {
-        navn: "Futte",
-        type: "Pingvin",
-        billede: "http://mabe-kea.dk/E19/pics/pig.png",
-        levested: "Grønland",
-      };
+    <img src="http://mabe-kea.dk/E19/pics/pig.png" alt="pig" />
 
-      console.log(
-        `Navn: ${dyr.navn}, Type: ${dyr.type}, Levested: ${dyr.levested}`
-      );
+    <script>
+      document.addEventListener("DOMContentLoaded", start);
+      let dyr = [
+        {
+          navn: "Futte",
+          type: "Pingvin",
+          billede: "http://mabe-kea.dk/E19/pics/pig.png",
+          levested: "Grønland",
+        },
+      ];
+
+      function start() {
+        const articlevisning = document.querySelector("article");
+        dyr.forEach((dyr) => {
+          articlevisning.innerHTML += `<p>Navn: ${dyr.navn}, Type: ${dyr.type}, Levested: ${dyr.levested} </p>`;
+        });
+      }
     </script>
   </body>
 </html>
