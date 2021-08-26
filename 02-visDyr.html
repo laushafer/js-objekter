@@ -12,7 +12,6 @@
       <h3></h3>
       <p></p>
     </article>
-
     <img src="http://mabe-kea.dk/E19/pics/pig.png" alt="pig" />
 
     <script>
@@ -25,12 +24,13 @@
           levested: "Grønland",
         },
       ];
-
       function start() {
         const articlevisning = document.querySelector("article");
         dyr.forEach((dyr) => {
           articlevisning.innerHTML += `<p>Navn: ${dyr.navn}, Type: ${dyr.type}, Levested: ${dyr.levested} </p>`;
         });
+
+        // document.querySelector("img").scr = dyr.billede;
       }
     </script>
   </body>
