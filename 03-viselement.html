@@ -8,9 +8,10 @@
   </head>
 
   <body>
-    <article>
+    <article id="dyr">
       <h3></h3>
-      <p></p>
+      <p>Type:</p>
+      <p>Levested:</p>
     </article>
     <img src="http://mabe-kea.dk/E19/pics/pig.png" alt="pig" />
 
@@ -19,9 +20,9 @@
       let dyr = [
         {
           navn: "Futte",
-          type: "Pingvin",
+          type: "Gris",
           billede: "http://mabe-kea.dk/E19/pics/pig.png",
-          levested: "Grønland",
+          levested: "Gård",
         },
       ];
       function start() {
@@ -29,6 +30,17 @@
         dyr.forEach((dyr) => {
           articlevisning.innerHTML += `<p>Navn: ${dyr.navn}, Type: ${dyr.type}, Levested: ${dyr.levested} </p>`;
         });
+
+        const Typep = document.createElement("p");
+        const LevestedP = document.createElement("p");
+        const navnh3 = document.createElement("h3");
+        const img = document.createElement("img");
+
+        articlevisning.appendChild(Typep);
+        articlevisning.appendChild(LevestedP);
+        articlevisning.appendChild(navnh3);
+        articlevisning.appendChild(img);
+        console.log("append");
 
         // document.querySelector("img").scr = dyr.billede;
       }
